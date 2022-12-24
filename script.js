@@ -30,7 +30,6 @@ fetchApi(searchValue);
 //Cari Gambar
 cari.addEventListener("click", () => {
     searchValue = search.value;
-    search.value = "";
     fetchApi(searchValue);
 });
 
@@ -95,6 +94,7 @@ async function fetchApi(s) {
     })
     .finally(() => {
         download();
+        search.value = "";
     });
 };
 
