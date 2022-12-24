@@ -74,7 +74,7 @@ async function fetchApi(s) {
     .then(response => response.json())
     .then(response => {
         if(response.hits.length > 0) {
-            content.innerHTML = `<div class="w-20 h-20 mx-auto my-40 rounded-full bg-pink-400 animate-ping"></div>`;
+            content.innerHTML = `<div class="w-20 h-20 mx-auto my-40 col-span-2 rounded-full bg-pink-400 animate-ping"></div>`;
             images = [];
             galeri.classList.remove("hidden");
             lihatlebih.classList.remove("hidden");
@@ -97,7 +97,7 @@ async function fetchApi(s) {
 async function next() {
     lihatlebih.classList.add("animate-pulse",
         "hidden");
-    content.innerHTML = `<div class="w-20 h-20 mx-auto my-40 rounded-full bg-pink-400 animate-ping"></div>`;
+    content.innerHTML = `<div class="w-20 h-20 mx-auto my-40 col-span-2 rounded-full bg-pink-400 animate-ping"></div>`;
     let newsimages = [];
     jumlah += 10;
     await fetch(`https://pixabay.com/api/?key=30687749-55e3b1380528a1c406b03920f&q=${searchValue}&editors_choice=true&per_page=${jumlah}`)
