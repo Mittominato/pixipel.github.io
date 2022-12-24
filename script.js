@@ -94,7 +94,6 @@ async function fetchApi(s) {
     })
     .finally(() => {
         download();
-        search.value = "";
     });
 };
 
