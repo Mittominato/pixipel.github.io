@@ -40,7 +40,7 @@ lihatlebih.addEventListener("click", () => {
 //function Pilihan
 pilihan.forEach(e => {
     e.addEventListener("click", () => {
-        search.value = "";
+        search.value = e.textContent;
         searchValue = e.textContent;
         fetchApi(searchValue);
     });
