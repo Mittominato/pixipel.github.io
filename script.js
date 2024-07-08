@@ -92,7 +92,7 @@ function makeSticky(element) {
 
 //function Fetch 
 async function fetchApi(s) {
-    await fetch(`https://pixabay.com/api/?key=30687749-55e3b1380528a1c406b03920f&q=${s}&editors_choice=true&per_page=10`)
+    await fetch(`https://pixabay.com/api/?key=30687749-55e3b1380528a1c406b03920f=${s}&editors_choice=true&per_page=10`)
     .then(response => response.json())
     .then(response => {
         if(response.hits.length > 0) {
@@ -120,7 +120,7 @@ async function next() {
     lihatlebih.innerHTML = `<div class="w-4 h-4 rounded-full bg-white animate-ping block mr-3"></div>Loading...`;
     let newsimages = [];
     jumlah += 10;
-    await fetch(`https://pixabay.com/api/?key=30687749-55e3b1380528a1c406b03920f&q=${searchValue}&editors_choice=true&per_page=${jumlah}`)
+    await fetch(`https://pixabay.com/api/?key=30687749-55e3b1380528a1c406b03920f=${searchValue}&editors_choice=true&per_page=${jumlah}`)
     .then(response => response.json())
     .then(response => {
         response.hits.forEach(image => {
